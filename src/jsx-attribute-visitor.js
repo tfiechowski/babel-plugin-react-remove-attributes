@@ -1,11 +1,7 @@
-export default function JSXAttribute(path, state) {
-  const attributes = state.opts.attributes || ['data-test-id'];
+export default (path, state) => {
+  const attributes = state.opts;
 
-  path.traverse({
-    JSXIdentifier(_path) {
-      if (attributes.includes(_path.node.name)) {
-        _path.parentPath.remove();
-      }
-    },
-  });
-}
+  if (attributes.includes(path.node.name)) {
+    path.parentPath.remove();
+  }
+};
