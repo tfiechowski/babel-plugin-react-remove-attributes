@@ -6,7 +6,6 @@ export default function JSXAttribute(path, state) {
   path.traverse({
     JSXIdentifier(_path) {
       if (properties.indexOf(_path.node.name) > -1) {
-        console.log("Removing " + _path.node.name);
         _path.parentPath.remove();
       }
     }
