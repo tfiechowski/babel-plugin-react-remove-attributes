@@ -3,7 +3,7 @@ import pluginTester from "babel-plugin-tester";
 import reactRemoveAttributesPlugin from "../src";
 import { createTest } from "./utils";
 
-const tests = [];
+const tests = [createTest("single", "Single component")];
 
 pluginTester({
   plugin: reactRemoveAttributesPlugin,
