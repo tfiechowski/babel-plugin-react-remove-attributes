@@ -8,9 +8,20 @@ const simpleTests = [
 
 const nestedTests = [
   createTest("nested/two", "Parent and child component"),
-  createTest("nested/array", "Parent and array of child components"),
+  createTest("nested/array", "Parent and array of child components")
+];
 
-]
+const customAttributeTests = [
+  createTest("custom_attrs/single", "Custom data-test-class attribute", [
+    "data-test-class"
+  ]),
+  createTest(
+    "custom_attrs/multiple",
+    "Multiple custom data-test-* attributes",
+    ["data-test-id", "data-test-class", "data-test-icon", "data-test-label"]
+  )
+];
 
-runTests('Simple components', simpleTests);
-runTests('Nested components', nestedTests);
+runTests("Simple components", simpleTests);
+runTests("Nested components", nestedTests);
+runTests("Custom attributes", customAttributeTests);
