@@ -6,4 +6,11 @@ const simpleTests = [
   createTest("simple/array", "Support arrays")
 ];
 
-runTests('Simple tests', simpleTests);
+const nestedTests = [
+  createTest("nested/two", "Parent and child component"),
+  createTest("nested/array", "Parent and array of child components"),
+
+]
+
+runTests('Simple components', simpleTests);
+runTests('Nested components', nestedTests);
