@@ -1,21 +1,23 @@
 {
   "name": "babel-plugin-react-remove-attributes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "rollup -c",
     "test": "mocha",
     "lint": "eslint --max-warnings=0 .",
     "lint:fix": "eslint --max-warnings=0 --fix ."
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "babel-plugin-syntax-jsx": "^6.18.0"
+  },
   "devDependencies": {
     "@codility/eslint-config-codility": "^1.0.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.0",
-    "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-tester": "^4.0.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
@@ -26,6 +28,8 @@
     "eslint-plugin-react": "^7.3.0",
     "mocha": "^3.5.3",
     "prettier": "^1.7.0",
-    "prettier-eslint": "^8.1.1"
+    "prettier-eslint": "^8.1.1",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2"
   }
 }
