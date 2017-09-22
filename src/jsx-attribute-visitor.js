@@ -3,7 +3,7 @@ export default function JSXAttribute(path, state) {
 
   path.traverse({
     JSXIdentifier(_path) {
-      if (attributes.indexOf(_path.node.name) > -1) {
+      if (attributes.includes(_path.node.name)) {
         _path.parentPath.remove();
       }
     },
