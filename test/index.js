@@ -1,2 +1,2 @@
-require("babel-register");
-require("./tests");
+require('babel-register');
+require('./tests');

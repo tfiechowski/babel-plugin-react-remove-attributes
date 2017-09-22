@@ -1,4 +1,4 @@
-const children = ["John Lemon", "Yoko Ono"];
+const children = ['John Lemon', 'Yoko Ono'];
 
 <Parent data-test-id="parent">
   {children.map((child, index) => (
