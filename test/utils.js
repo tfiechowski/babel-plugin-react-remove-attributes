@@ -22,7 +22,7 @@ export const createTest = (name, title, options) => {
 export const runTests = (title, tests, options) => {
   const params = {
     plugin: reactRemoveAttributesPlugin,
-    pluginName: "babel-plugin-react-remove-attributes",
+    pluginName: title,
     filename: __filename,
     babelOptions: {
       plugins: ["babel-plugin-syntax-jsx"]
