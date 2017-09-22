@@ -1,17 +1,9 @@
-import pluginTester from "babel-plugin-tester";
+import { createTest, runTests } from "./utils";
 
-import reactRemoveAttributesPlugin from "../src";
-import { createTest } from "./utils";
+const simpleTests = [
+  createTest("simple/single", "Single component"),
+  createTest("simple/single", "Pass data-test-id in options", ["data-test-id"]),
+  createTest("simple/array", "Support arrays")
+];
 
-const tests = [createTest("single", "Single component")];
-
-pluginTester({
-  plugin: reactRemoveAttributesPlugin,
-  pluginName: "babel-plugin-react-remove-attributes",
-  filename: __filename,
-  babelOptions: {
-    plugins: ["babel-plugin-syntax-jsx"]
-  },
-  snapshot: false,
-  tests
-});
+runTests('Simple tests', simpleTests);

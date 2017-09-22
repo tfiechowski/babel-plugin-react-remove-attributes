@@ -1,3 +1,7 @@
+import pluginTester from "babel-plugin-tester";
+
+import reactRemoveAttributesPlugin from "../src";
+
 export const createTest = (name, title, options) => {
   const fixture = `fixtures/${name}/actual.js`;
   const outputFixture = `fixtures/${name}/expected.js`;
@@ -13,4 +17,23 @@ export const createTest = (name, title, options) => {
   }
 
   return test;
+};
+
+export const runTests = (title, tests, options) => {
+  const params = {
+    plugin: reactRemoveAttributesPlugin,
+    pluginName: "babel-plugin-react-remove-attributes",
+    filename: __filename,
+    babelOptions: {
+      plugins: ["babel-plugin-syntax-jsx"]
+    },
+    snapshot: false,
+    tests
+  };
+
+  if (options) {
+    params = Object.assign({}, params, options);
+  }
+
+  pluginTester(params);
 };
