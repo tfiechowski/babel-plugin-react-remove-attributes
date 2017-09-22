@@ -1,5 +1,6 @@
 # babel-plugin-react-remove-attributes
 
+[![npm version](https://badge.fury.io/js/babel-plugin-react-remove-attributes.svg)](https://badge.fury.io/js/babel-plugin-react-remove-attributes)
 [![Build Status](https://travis-ci.org/tfiechowski/babel-plugin-react-remove-attributes.svg?branch=master)](https://travis-ci.org/tfiechowski/babel-plugin-react-remove-attributes)
 
 ## About
