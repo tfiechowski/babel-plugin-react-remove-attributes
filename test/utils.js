@@ -25,7 +25,7 @@ export const createTest = (name, title, options) => {
   };
 
   if (options) {
-    test['pluginOptions'] = { attributes: options };
+    test['pluginOptions'] = options;
   }
 
   return test;
