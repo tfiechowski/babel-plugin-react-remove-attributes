@@ -1,8 +1,9 @@
 {
   "name": "babel-plugin-react-remove-attributes",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
   "main": "lib/index.js",
+  "files": ["lib"],
   "scripts": {
     "build": "rollup -c",
     "test": "mocha",
