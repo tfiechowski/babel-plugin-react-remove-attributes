@@ -24,6 +24,7 @@ const customAttributeTests = [
     'Multiple custom data-test-* attributes inside nested arrays',
     { ids: ['data-test-id', 'data-test-class', 'data-test-icon', 'data-test-label', 'data-test-item'] },
   ),
+  createTest('custom_attrs/multiple', 'Multiple custom data-test-* attributes with RegExp', { ids: /^data-test-/ }),
 ];
 
 runTests('Simple components', simpleTests);
