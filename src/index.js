@@ -16,7 +16,7 @@ export default function({ types }) {
     },
     inherits: babelPluginSyntaxJSX,
     visitor: {
-      JSXIdentifier: attributeVisitor,
+      JSXAttribute: attributeVisitor,
     },
   };
 }
