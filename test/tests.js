@@ -12,17 +12,17 @@ const nestedTests = [
 ];
 
 const customAttributeTests = [
-  createTest('custom_attrs/single', 'Custom data-test-class attribute', ['data-test-class']),
-  createTest('custom_attrs/multiple', 'Multiple custom data-test-* attributes', [
+  createTest('custom_attrs/single', 'Custom data-test-class attribute', { ids: ['data-test-class'] }),
+  createTest('custom_attrs/multiple', 'Multiple custom data-test-* attributes', { ids: [
     'data-test-id',
     'data-test-class',
     'data-test-icon',
     'data-test-label',
-  ]),
+  ] }),
   createTest(
     'custom_attrs/nested_arrays',
     'Multiple custom data-test-* attributes inside nested arrays',
-    ['data-test-id', 'data-test-class', 'data-test-icon', 'data-test-label', 'data-test-item'],
+    { ids: ['data-test-id', 'data-test-class', 'data-test-icon', 'data-test-label', 'data-test-item'] },
   ),
 ];
 

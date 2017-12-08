@@ -1,14 +1,22 @@
 import babelPluginSyntaxJSX from 'babel-plugin-syntax-jsx';
 import attributeVisitor from './jsx-attribute-visitor';
 
-export default function() {
+export default function({ types }) {
   return {
     pre() {
-      if (!Array.isArray(this.opts)) {
-        this.opts = ['data-test-id'];
+      this.types = types;
+
+      if (!this.opts.ids) {
+        this.opts.ids = ['data-test-id'];
+      }
+
+      if (!Array.isArray(this.opts.ids)) {
+        this.opts.ids = [this.opts.ids];
       }
     },
     inherits: babelPluginSyntaxJSX,
-    visitor: { JSXIdentifier: attributeVisitor },
+    visitor: {
+      JSXIdentifier: attributeVisitor,
+    },
   };
 }

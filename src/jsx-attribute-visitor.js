@@ -1,7 +1,7 @@
 export default (path, state) => {
-  const attributes = state.opts;
+  const { ids } = state.opts;
 
-  if (attributes.includes(path.node.name)) {
+  if (ids.includes(path.node.name)) {
     path.parentPath.remove();
   }
 };
