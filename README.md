@@ -23,5 +23,16 @@ will become:
 
 ## How to use
 
+By default, `data-test-id` is removed.
+
+It's possible to pass attributes that we want to remove in several ways:
+
+| Input type | example |
+|---|---|
+| string | `data-test-something` |
+| array of strings | `['data-test-one', 'data-test-two']` |
+| regular expression | `/data-test-*/` |
+| array of regular expressions | `[/data-test-*/, /data-details-*/]` |
+
 ## TODO:
- - improve readme
+ - Replace lodash isEqual check
