@@ -11,6 +11,12 @@ const nestedTests = [
   createTest('nested/array', 'Parent and array of child components'),
 ];
 
+const regexTests = [
+  createTest('regex/simple', 'Simple regex', /data-test-.*/),
+  createTest('regex/nested', 'Simple regex for tree of components', /data-test-.*/),
+  createTest('regex/arrays', 'Simple regex for arrays', /data-test-.*/),
+];
+
 const customAttributeTests = [
   createTest('custom_attrs/single', 'Custom data-test-class attribute', ['data-test-class']),
   createTest('custom_attrs/multiple', 'Multiple custom data-test-* attributes', [
@@ -29,3 +35,4 @@ const customAttributeTests = [
 runTests('Simple components', simpleTests);
 runTests('Nested components', nestedTests);
 runTests('Custom attributes', customAttributeTests);
+runTests('Regular expressions', regexTests);
