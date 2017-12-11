@@ -15,6 +15,7 @@ const regexTests = [
   createTest('regex/simple', 'Simple regex', /data-test-.*/),
   createTest('regex/nested', 'Simple regex for tree of components', /data-test-.*/),
   createTest('regex/arrays', 'Simple regex for arrays', /data-test-.*/),
+  createTest('regex/arrays', 'Multiple regex queries', [/data-test-.*/, /data-oceans-*/]),
 ];
 
 const customAttributeTests = [
